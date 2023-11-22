@@ -3,7 +3,7 @@ import { StudentServices } from "./student.service"
 
 const createStudent = async (req: Request, res: Response) => {
     try {
-        const student = req.body
+        const student = req.body.student
 
         const result = await StudentServices.createStudentToDB(student)
 
@@ -16,6 +16,8 @@ const createStudent = async (req: Request, res: Response) => {
         throw new Error("Some went wrong")
     }
 }
+
+
 
 export const StudentController = {
     createStudent,
