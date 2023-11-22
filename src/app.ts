@@ -10,12 +10,12 @@ app.use(cors());
 
 // api/v1/students
 // application routes
-app.use('/api/v1/students', StudentRoutes)
+app.use('/api/v1/students', StudentRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   const a = 10;
 
-  res.json({a})
+  res.json({ a });
 });
 
 export default app;
